@@ -4,6 +4,7 @@ import Error404 from "./pages/error404";
 import Contact from "./pages/contact";
 import Navbar from "./components/navbar";
 import FAQ from "./pages/faq";
+import Footer from "./components/navbar/footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
+      <Footer/>
     </>
   );
 }
