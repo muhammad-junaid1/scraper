@@ -1,7 +1,20 @@
+import { Routes, Route } from "react-router";
+import Home from "./pages/home";
+import Error404 from "./pages/error404";
+import Contact from "./pages/contact";
+import Navbar from "./components/navbar";
+import FAQ from "./pages/faq";
+
 function App() {
   return (
     <>
-      <h1 className="text-red-500">Hello React</h1>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
     </>
   );
 }
